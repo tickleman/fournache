@@ -1,18 +1,18 @@
 <?php
-namespace ITRocks\Task\Year_Of_Weeks\Demo\Plank;
+namespace Tickleman\Fournache\Plank;
 
 use ITRocks\Framework\Mapper\Component;
 use ITRocks\Framework\Tools\Date_Time;
-use ITRocks\Task\Year_Of_Weeks\Demo;
-use ITRocks\Task\Year_Of_Weeks\Demo\Plank;
+use ITRocks\Planner;
+use Tickleman\Fournache\Plank;
 
 /**
  * A task, linked to a plank
  *
- * @link Demo\Task
+ * @link Planner\Task
  * @unique plank, task, week
  */
-class Task extends Demo\Task
+class Task extends Planner\Task
 {
 	use Component;
 
@@ -28,7 +28,7 @@ class Task extends Demo\Task
 	/**
 	 * @composite
 	 * @link Object
-	 * @var Task
+	 * @var Planner\Task
 	 */
 	public $task;
 
@@ -42,10 +42,10 @@ class Task extends Demo\Task
 	//----------------------------------------------------------------------------------- __construct
 	/** @noinspection PhpMissingParentConstructorInspection */
 	/**
-	 * @param $task Task
+	 * @param $task Planner\Task
 	 * @param $week Date_Time
 	 */
-	public function __construct(Task $task = null, Date_Time $week = null)
+	public function __construct(Planner\Task $task = null, Date_Time $week = null)
 	{
 		if (isset($task)) {
 			$this->task = $task;
