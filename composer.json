@@ -1,0 +1,18 @@
+{
+	"authors":     [{ "name": "tickleman",  "email": "baptiste@pillot.fr" }],
+	"description": "Logiciel de planification maraîchère de la Ferme de la Fournache",
+	"extra": {
+		"installer-paths": { "tickleman/fournache/": ["type:itrocks"] },
+		"installer-types": ["itrocks"]
+	},
+	"license":           "MIT",
+	"minimum-stability": "dev",
+	"name":              "tickleman/fournache",
+	"prefer-stable":     true,
+	"repositories":      [{ "type": "composer", "url": "https://packages.bappli.com" }],
+	"require": {
+		"itrocks/framework": "dev-master",
+		"itrocks/planner":   "dev-master"
+	},
+	"type": "itrocks-final"
+}
